@@ -8,7 +8,6 @@
     --list-link-color: #212121;
     --accent-color: #2196F3;
     --header-mail-tel-link-color:  #757575;
-    --hero-bcg-color: #2F303A;
     --hero-title-color:  #FFFFFF;
     --button-text-color: #FFFFFF;
     --title-name-color:  #212121;
@@ -138,15 +137,25 @@ color: var(--list-link-color);
     margin-right: 50px;
 }
 
+.header-link-svg {
+    fill: var(--header-mail-tel-link-color);
+}
+
+.header-mail-link:hover .header-link-svg,
+.header-tel-link:hover .header-link-svg {
+    fill: var(--accent-color);
+}
+
+
     /*============ END HEADER ===========*/
 
     /*============= HERO ============*/
 
 .hero {
-    background: var(--hero-bcg-color);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../photos/herobg.png);
+    background-size: contain;
     padding-top: 200px;
     padding-bottom: 200px;
-    margin-bottom: 95px;
        
 }
 
@@ -189,18 +198,61 @@ background-color: var(--accent-color);
 }
 /*============ END HERO ===========*/
 
-/*=========== ADVANTAGES ==========*/
+/*=========== FEATURES ==========*/
 
-.advantages-list {
+.features-list {
     display: flex;
     margin-bottom: 95px;  
 }
 
+.features-list-item:nth-child(1)::before {
+  display: inline-block;
+  content: "";
+  background-image: url(../svg-adv/antenna.svg);
+  width: 70px;
+  height: 70px;
+  margin-top: 119px;
+  margin-bottom: 55px;
+  margin-left: 100px;
+}
 
-.advantages-list-item:not(:last-child) {
+.features-list-item:nth-child(2)::before {
+    display: inline-block;
+    content: "";
+    background-image: url(../svg-adv/clock.svg);
+    width: 70px;
+    height: 70px;
+    margin-top: 119px;
+    margin-bottom: 55px;
+    margin-left: 100px;
+  }
+
+  .features-list-item:nth-child(3)::before {
+    display: inline-block;
+    content: "";
+    background-image: url(../svg-adv/diagram.svg);
+    width: 70px;
+    height: 70px;
+    margin-top: 119px;
+    margin-bottom: 55px;
+    margin-left: 100px;
+  }
+
+  .features-list-item:nth-child(4)::before {
+    display: inline-block;
+    content: "";
+    background-image: url(../svg-adv/astronaut.svg);
+    width: 70px;
+    height: 70px;
+    margin-top: 119px;
+    margin-bottom: 55px;
+    margin-left: 100px;
+  }
+
+.features-list-item:not(:last-child) {
     margin-right: 30px ;
 }
-.advantages-item-title {
+.features-item-title {
 font-weight: 700;
 font-size: 14px;
 line-height: 1.143;
@@ -210,7 +262,7 @@ color: var(--title-name-color);
 margin-bottom: 10px;
 }
 
-.advantages-description {
+.features-description {
 font-weight: 400;
 font-size: 14px;
 line-height: 1.714;
@@ -218,7 +270,7 @@ letter-spacing: 0.03em;
 color: var(--description-color);
 }
 
-/*=========== END ADVANTAGES ==========*/
+/*=========== END FEATURES ==========*/
 
 /*============ KINDS OF WORK ============*/
 
@@ -261,7 +313,7 @@ color: var(--description-color);
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    padding-bottom: 30px;
+    padding-bottom: 42px;
 }
 
 .team-member-photo {
@@ -286,18 +338,79 @@ text-align: center;
 letter-spacing: 0.03em;
 color: var(--description-color);
 margin-right: auto;
+margin-bottom: 28px;
 }
 
+.social-link-list {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.social-link {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.social-link:hover {
+background-color: var(--accent-color);
+}
+
+.social-link-svg:hover {
+    fill: #ffffff;
+}
+.social-link-svg {
+fill: #AFB1B8;
+}
 /*=============== END TEAM ============*/
 
-/*================= FOOTER ==============*/
 
+/*================ CLIENTS ============*/
+.clients {
+    padding-top: 95px;
+    padding-bottom: 94px;
+}
+.clients-list {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.clients-list-item {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #AFB1B8;
+  width: 170px;
+  height: 90px;
+  border-radius: 2px;
+  
+}
+.clients-list-item:hover {
+    border-color: var(--accent-color);
+}
+
+.clients-item-svg:hover {
+    fill: var(--accent-color);
+}
+.clients-item-svg {
+fill: #AFB1B8;
+}
+/*================ END CLIENTS ============*/
+
+
+/*================= FOOTER ==============*/
 .footer {
     background-color:var(--footer-bcg-color);
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
+.footer .container {
+    display: flex;
+}
 .footer-logo {
     font-family: var(--secondary-font);
     font-weight: 700;
@@ -309,6 +422,7 @@ margin-right: auto;
 }
  .footer-list {
   margin-top: 20px;
+  margin-right: 70px;
 }
 
 .footer-list-item:not(:last-child) {
@@ -324,12 +438,51 @@ margin-right: auto;
 }
 .footer-map-link {
     color: var(--footer-map-link-color);
+    margin-right: 70px;
 }
 
 .footer-mail-tel-link {
     color: var(--footer-mail-tel-link-color);
 }
 
+.footer-subtitle {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.footer-social-link-list {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.footer-social-link-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer-social-link {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color:rgba(255, 255, 255, 0.1);;
+}
+.footer-social-link:hover {
+background-color: var(--accent-color);
+}
+
+.footer-social-link-svg:hover {
+    fill: #ffffff;
+}
+.footer-social-link-svg {
+fill: #ffffff;
+}
 /*================= END FOOTER ==============*/
 
 /*============== PORTFOLIO  ===========*/
@@ -377,6 +530,10 @@ width: 370px;
 margin-right: 30px;
 margin-bottom: 30px;
 padding-bottom: 20px;
+}
+
+.portfolio-projects-item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);  
 }
 
 .portfolio-projects-item:nth-child(3n) {
