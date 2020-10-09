@@ -237,33 +237,36 @@ cursor: pointer;
     display: inline-block;
     content: "";
     background-image: url(../svg-adv/clock.svg);
-    width: 70px;
-    height: 70px;
-    margin-top: 119px;
-    margin-bottom: 55px;
-    margin-left: 100px;
+    width: 270px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F5F4FA;
+  margin-bottom: 55px;
   }
 
   .features-list-item:nth-child(3)::before {
     display: inline-block;
     content: "";
     background-image: url(../svg-adv/diagram.svg);
-    width: 70px;
-    height: 70px;
-    margin-top: 119px;
-    margin-bottom: 55px;
-    margin-left: 100px;
+    width: 270px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F5F4FA;
+  margin-bottom: 55px;
   }
 
   .features-list-item:nth-child(4)::before {
     display: inline-block;
     content: "";
     background-image: url(../svg-adv/astronaut.svg);
-    width: 70px;
-    height: 70px;
-    margin-top: 119px;
-    margin-bottom: 55px;
-    margin-left: 100px;
+    width: 270px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F5F4FA;
+  margin-bottom: 55px;
   }
 
 .features-list-item:not(:last-child) {
